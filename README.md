@@ -1,5 +1,9 @@
 # Vue Flask Template
 
+<https://blog.csdn.net/gitblog_00052/article/details/138108839>
+
+<https://gitcode.com/Ailln/vue-flask-template/overview?utm_source=artical_gitcode>
+
 📦 一个快速搭建 Web 应用的模版！前端使用渐进式框架 [Vue](https://github.com/vuejs/vue)，后端使用微框架 [Flask](https://github.com/pallets/flask)。
 
 ## 使用方法
@@ -76,3 +80,15 @@
 - [Flask 官方文档](https://flask.palletsprojects.com/en/1.1.x/)
 - [如何安装 Node 开发环境？](https://www.v2ai.cn/2018/11/11/linux/7-node-install/)
 - [如何安装 Python 开发环境？](https://www.v2ai.cn/2018/04/29/python/2-python-install/)
+
+
+---
+## change ip
+To deploy it on the server, replace localhost with the ip of your server.
+```vue
+  const rsp1 = await fetch(`http://localhost:8010/hello`).then(rsp => rsp.text())
+  data.text1 = rsp1
+  const rsp2 = await fetch(`http://localhost:8010/hello`, {method: 'POST'}).then(rsp => rsp.text())
+```
+
+I donot know why this project does not have cors problem, and not require `,{headers: {"Access-Control-Allow-Origin": "*"}}`

@@ -28,9 +28,9 @@ const state = reactive({ count: 0 })
 const data = reactive({ text1: "" })
 
 onMounted(async () => {
-  const rsp1 = await fetch(`http://127.0.0.1:8010/hello`).then(rsp => rsp.text())
+  const rsp1 = await fetch(`http://localhost:8010/hello`).then(rsp => rsp.text())
   data.text1 = rsp1
-  const rsp2 = await fetch(`http://127.0.0.1:8010/hello`, {method: 'POST'}).then(rsp => rsp.text())
+  const rsp2 = await fetch(`http://localhost:8010/hello`, {method: 'POST'}).then(rsp => rsp.text())
   data.text2 = rsp2
 })
 </script>
